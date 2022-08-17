@@ -15,8 +15,8 @@ var ball;
 
 
 function preload(){
-  player1 = loadImage("player1.png");
-  player2 = loadImage("player2.png");
+  player1Img = loadImage("player1.png");
+  player2Img = loadImage("player2.png");
   bg = loadImage("bgImage.jpg");
   tableImg = loadImage("table.png");
   ball = loadImage("ball.png") 
@@ -45,6 +45,7 @@ function draw()
   background(51);
   image(bg,0,0,1500,500)
   Engine.update(engine);
+  ground.show();
 
   push();
   imageMode(CENTER);
@@ -53,9 +54,9 @@ function draw()
   pop();
 
   fill("white");
-  rect(player1Img, player1.position.x, player1.position.y,100,100);
+  image(player1Img, player1.position.x, player1.position.y,100,100);
 
-  ground.show();
+  
   
   
 }
